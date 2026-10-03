@@ -185,4 +185,4 @@ Le texte d'origine ne contenait aucune information propre. La version corrigée 
 
 ---
 
-*Méthode Do Ingenia, issue de la relecture des contenus produits pour nos clients. Plus de détails : [doingenia.com/skills](https://doingenia.com/skills/). Licence CC BY 4.0.*
+*Méthode Do Ingenia, issue de la relecture des contenus produits pour nos clients. Plus de détails : [doingenia.com/nos-outils/skills](https://doingenia.com/nos-outils/skills/). Licence CC BY 4.0.*

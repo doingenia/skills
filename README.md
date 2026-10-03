@@ -27,7 +27,7 @@ npx skills add doingenia/skills
 |---|---|---|---|---|
 | Écriture | `doingenia-ecriture` | [`relecture-anti-ia`](plugins/ecriture/skills/relecture-anti-ia/) | Relit un texte et retire les tics d'écriture qui trahissent une rédaction par IA, sans rien inventer. | [Mode d'emploi](plugins/ecriture/skills/relecture-anti-ia/README.md) |
 
-D'autres familles arrivent : expertise (interview d'expert, capitalisation), GEO (perception des IA, citabilité d'une page). Le détail de chaque skill est sur [doingenia.com/skills](https://doingenia.com/skills/).
+D'autres familles arrivent : expertise (interview d'expert, capitalisation), GEO (perception des IA, citabilité d'une page). Le détail de chaque skill est sur [doingenia.com/nos-outils/skills](https://doingenia.com/nos-outils/skills/).
 
 ## La philosophie
 
@@ -48,4 +48,4 @@ Les retours d'usage et les signalements de bugs sont les bienvenus dans les [iss
 
 ---
 
-**Pour aller plus loin** : le détail des skills, des exemples et la façon dont nous les utilisons en mission sont sur [doingenia.com/skills](https://doingenia.com/skills/).
+**Pour aller plus loin** : le détail des skills, des exemples et la façon dont nous les utilisons en mission sont sur [doingenia.com/nos-outils/skills](https://doingenia.com/nos-outils/skills/).
