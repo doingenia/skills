@@ -1,5 +1,11 @@
 # relecture-anti-ia : journal des versions
 
+## 0.2.2
+
+- Lancé sans texte ni fichier, le skill affiche l'aide et demande le texte au lieu de reprendre un texte précédent.
+- Version corrigée toujours dans un bloc de code Markdown dans la conversation.
+- Indication d'arguments pour la commande `/doingenia-ecriture:relecture-anti-ia`, et usage documenté.
+
 ## 0.2.1
 
 - Commande d'aide : « relecture-anti-ia aide » affiche les options.

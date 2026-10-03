@@ -5,4 +5,4 @@ Les évolutions de chaque skill sont détaillées dans le `CHANGELOG.md` de son 
 ## [Non publié]
 
 - Création du dépôt.
-- Plugin `doingenia-ecriture` avec le skill `relecture-anti-ia` (0.2.1).
+- Plugin `doingenia-ecriture` avec le skill `relecture-anti-ia` (0.2.2).

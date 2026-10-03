@@ -1,6 +1,7 @@
 ---
 name: relecture-anti-ia
 description: Relit un texte en français (article, page de site, newsletter, post) pour retirer les tics d'écriture qui trahissent une rédaction par IA, sans inventer de faits et sans perdre le mot-clé visé. Produit un diagnostic règle par règle, une version corrigée et la liste des endroits où il manque de la matière terrain, dans la conversation ou dans un fichier Markdown. À utiliser quand on demande de « relire », « humaniser », « rendre moins IA », « retirer les marqueurs IA » ou de vérifier qu'un texte ne sonne pas généré. Mode « diagnostic seul » sur demande.
+argument-hint: "[texte ou @fichier] [diagnostic seul] [en fichier] [mot-clé : …]"
 ---
 
 # Relecture anti-IA
@@ -16,6 +17,8 @@ Il ne rend pas un texte « humain » en lui ajoutant de faux souvenirs. Ce qui r
 - Facultatif : le mot-clé principal visé. S'il n'est pas donné, le déduire du titre (ou du champ de mot-clé si le fichier en a un) et l'indiquer en tête du diagnostic.
 - Facultatif : « diagnostic seul ». Dans ce cas, produire uniquement la partie 1 de la sortie et ne pas réécrire.
 - Facultatif : « en fichier » ou « en Markdown ». Voir la section « Où rendre la sortie ».
+
+**Si aucun texte ni fichier n'accompagne la demande**, ne jamais reprendre de soi-même un texte vu plus tôt dans la conversation : afficher l'aide (section suivante) et demander le texte à relire. Reprendre un texte précédent seulement si l'utilisateur le demande explicitement (« relis le texte précédent »).
 
 ## Aide
 
@@ -144,7 +147,7 @@ En tête, le verdict du test ChatGPT (règle 18). Puis :
 
 ## Où rendre la sortie
 
-- **Texte collé dans la conversation** : rendre la sortie dans la conversation. Présenter la version corrigée dans un bloc de code Markdown, pour qu'elle se copie telle quelle sans symboles parasites.
+- **Texte collé dans la conversation** : rendre la sortie dans la conversation. La version corrigée va **toujours** dans un bloc de code ouvert par ```` ```markdown ````, même si l'interface afficherait le Markdown proprement sans lui : c'est ce qui permet de la copier telle quelle.
 - **Fichier fourni en entrée** (et si l'environnement permet d'écrire des fichiers) : écrire la sortie dans un fichier `<nom-du-fichier>.relecture.md`, dans le même dossier que l'original. Si ce fichier existe déjà, ajouter la date : `<nom-du-fichier>.relecture-AAAA-MM-JJ.md`. Ne jamais modifier le fichier d'origine. Dans la conversation, donner seulement le chemin du fichier créé, la synthèse du diagnostic et le verdict du test ChatGPT.
 - **Demande « en fichier » ou « en Markdown » pour un texte collé** : écrire `relecture-AAAA-MM-JJ.md` dans le dossier de travail.
 - **Si l'environnement ne permet pas d'écrire de fichier** : rendre toute la sortie dans la conversation, dans un seul bloc de code Markdown, prête à être enregistrée.

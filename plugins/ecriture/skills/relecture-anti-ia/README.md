@@ -34,7 +34,13 @@ Ou donnez un fichier :
 Relis @article.md avec relecture-anti-ia
 ```
 
-Pour afficher les options dans Claude : `relecture-anti-ia aide`.
+Ou, dans Claude Code, lancez-le comme une commande (tapez `/relec` et laissez l'autocomplétion faire le reste) :
+
+```
+/doingenia-ecriture:relecture-anti-ia @article.md diagnostic seul, mot-clé : traduction assermentée
+```
+
+Lancé sans texte, le skill affiche son aide et vous demande le texte à relire. Pour afficher l'aide à tout moment : `relecture-anti-ia aide`.
 
 ## Options
 
