@@ -1,0 +1,52 @@
+name: Anti-fuite
+
+# Bloque toute publication contenant un terme de la liste interdite
+# (noms de clients, noms de personnes interviewées) ou un secret.
+# La liste n'est jamais dans le dépôt : elle vit dans le secret LISTE_INTERDITE,
+# un terme par ligne. Les journaux d'un dépôt public sont publics : on n'y
+# affiche que les noms de fichiers, jamais les termes trouvés.
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  liste-interdite:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Vérifier l'absence de termes interdits
+        env:
+          LISTE_INTERDITE: ${{ secrets.LISTE_INTERDITE }}
+          EST_UN_FORK: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.repo.fork }}
+        run: |
+          if [ -z "$LISTE_INTERDITE" ]; then
+            if [ "$EST_UN_FORK" = "true" ]; then
+              echo "::warning::Pull request externe : la liste interdite n'est pas accessible. Vérification refaite après fusion."
+              exit 0
+            fi
+            echo "::error::Le secret LISTE_INTERDITE est absent ou vide."
+            exit 1
+          fi
+          LISTE="$RUNNER_TEMP/liste-interdite.txt"
+          printf '%s\n' "$LISTE_INTERDITE" | sed '/^[[:space:]]*$/d' > "$LISTE"
+          while IFS= read -r terme; do echo "::add-mask::$terme"; done < "$LISTE"
+          if git grep -l -i -w -F -f "$LISTE" -- . ; then
+            echo "::error::Les fichiers ci-dessus contiennent un terme de la liste interdite. Vérifiez-les en local avec scripts/verifier-liste-interdite.sh."
+            exit 1
+          fi
+          echo "Aucun terme interdit trouvé."
+
+  secrets:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

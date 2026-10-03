@@ -1,0 +1,37 @@
+name: Retour d'usage
+description: Vous avez utilisé un skill sur un cas réel ? Racontez-nous.
+labels: ["retour d'usage"]
+body:
+  - type: input
+    id: skill
+    attributes:
+      label: Skill utilisé
+      placeholder: relecture-anti-ia
+    validations:
+      required: true
+  - type: textarea
+    id: contexte
+    attributes:
+      label: Le contexte
+      description: Pour quoi l'avez-vous utilisé (type de texte, secteur, objectif) ?
+    validations:
+      required: true
+  - type: textarea
+    id: marche
+    attributes:
+      label: Ce qui a bien marché
+  - type: textarea
+    id: coince
+    attributes:
+      label: Ce qui a coincé ou manqué
+  - type: dropdown
+    id: contact
+    attributes:
+      label: Accepteriez-vous d'en parler 15 minutes avec nous ?
+      options:
+        - Non merci
+        - Oui, je laisse un moyen de contact ci-dessous
+  - type: input
+    id: moyen-contact
+    attributes:
+      label: Moyen de contact (facultatif)

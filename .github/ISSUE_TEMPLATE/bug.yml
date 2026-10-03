@@ -1,0 +1,29 @@
+name: Bug
+description: Un skill ne fait pas ce qu'il annonce, ou un script plante.
+labels: ["bug"]
+body:
+  - type: input
+    id: skill
+    attributes:
+      label: Skill concerné
+      placeholder: relecture-anti-ia
+    validations:
+      required: true
+  - type: textarea
+    id: attendu
+    attributes:
+      label: Ce que vous attendiez
+    validations:
+      required: true
+  - type: textarea
+    id: obtenu
+    attributes:
+      label: Ce que vous avez obtenu
+      description: Message d'erreur ou extrait de la réponse. Retirez toute donnée confidentielle.
+    validations:
+      required: true
+  - type: input
+    id: environnement
+    attributes:
+      label: Environnement
+      placeholder: Claude Code 2.x, macOS / Claude.ai / autre

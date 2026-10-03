@@ -1,0 +1,13 @@
+{
+  "name": "doingenia-ecriture",
+  "description": "Skills d'écriture de Do Ingenia : relire un texte pour retirer les tics qui trahissent une rédaction par IA.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Do Ingenia",
+    "url": "https://doingenia.com"
+  },
+  "homepage": "https://doingenia.com/skills/",
+  "repository": "https://github.com/doingenia/skills",
+  "license": "CC-BY-4.0",
+  "keywords": ["ecriture", "relecture", "redaction", "anti-ia", "contenu"]
+}
