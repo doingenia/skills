@@ -1,6 +1,11 @@
 # relecture-anti-ia : journal des versions
 
-## [Non publié] 0.2.0
+## 0.2.1
+
+- Commande d'aide : « relecture-anti-ia aide » affiche les options.
+- Mode d'emploi `README.md` dans le dossier du skill.
+
+## 0.2.0
 
 - Nouvelle règle 10 : pas de fausse opposition (« ce n'est pas X, c'est Y »), ni dans le texte relu ni dans la réécriture.
 - Nouvelle règle 17 : pas d'affirmation orpheline, sans preuve.

@@ -17,6 +17,20 @@ Il ne rend pas un texte « humain » en lui ajoutant de faux souvenirs. Ce qui r
 - Facultatif : « diagnostic seul ». Dans ce cas, produire uniquement la partie 1 de la sortie et ne pas réécrire.
 - Facultatif : « en fichier » ou « en Markdown ». Voir la section « Où rendre la sortie ».
 
+## Aide
+
+Si l'utilisateur demande « aide », « options » ou comment utiliser le skill, ne rien relire et répondre uniquement par ce tableau, suivi de l'exemple :
+
+| Ce que vous écrivez | Effet |
+|---|---|
+| `diagnostic seul` | Le tableau des problèmes, sans réécriture. |
+| `en fichier` ou `en Markdown` | La sortie est écrite dans un fichier `.md` (automatique quand un fichier est fourni). |
+| `mot-clé : …` | Le mot-clé principal à protéger. Sinon, il est déduit du titre. |
+| `c'est une page de service`, `c'est un post LinkedIn`… | Le type de texte. Sinon, il est déduit. |
+| `pour des dirigeants de PME`… | Le public visé (facultatif). |
+
+Exemple : `Relis @article.md avec relecture-anti-ia, diagnostic seul, mot-clé : traduction assermentée`
+
 ## Garde-fous (prioritaires sur toutes les règles)
 
 1. **Ne jamais inventer.** Aucun cas client, chiffre, date, nom, citation, anecdote ou expérience personnelle ne doit apparaître s'il n'est pas déjà dans le texte. Quand une règle demande de la matière que le texte ne contient pas (un récit, une nuance tirée du terrain, une prise de position), insérer un marqueur `[À COMPLÉTER : ce qu'il faudrait ici]` et l'ajouter à la partie 3 de la sortie.
