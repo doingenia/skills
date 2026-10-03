@@ -6,14 +6,14 @@
   },
   "metadata": {
     "description": "Skills Claude de Do Ingenia : extraire l'expertise, la rendre citable par les IA, mesurer ce qu'elles disent de vous.",
-    "version": "0.1.0"
+    "version": "0.2.0"
   },
   "plugins": [
     {
       "name": "doingenia-ecriture",
       "source": "./plugins/ecriture",
       "description": "Skills d'écriture : relire un texte pour retirer les tics qui trahissent une rédaction par IA.",
-      "version": "0.1.0",
+      "version": "0.2.0",
       "author": {
         "name": "Do Ingenia",
         "url": "https://doingenia.com"
