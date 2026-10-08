@@ -47,7 +47,7 @@ D'autres familles arrivent : expertise (interview d'expert, capitalisation), GEO
 
 ## Qui est derrière
 
-[Do Ingenia](https://doingenia.com) est un cabinet de conseil SEO et GEO et d'ingénierie IA, basé à Sophia-Antipolis. Il a été fondé par [Denis Degioanni](https://www.linkedin.com/in/denisdegioanni/), qui travaille sur le référencement depuis 2005.
+[Do Ingenia](https://doingenia.com) est un cabinet de conseil SEO et GEO et d'ingénierie IA, basé à Sophia-Antipolis. Il a été fondé par [Denis Degioanni](https://www.linkedin.com/in/denisdegioanni/), qui travaille sur les technologies web depuis 1996.
 
 ## Contribuer
 
