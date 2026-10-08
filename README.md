@@ -1,7 +1,7 @@
 # Skills Do Ingenia
 
-[![Testé dans Claude Code](https://img.shields.io/badge/test%C3%A9%20dans-Claude%20Code-191919?logo=claude&logoColor=fff)](#installation)
-[![Testé dans Mistral Vibe](https://img.shields.io/badge/test%C3%A9%20dans-Mistral%20Vibe-FA520F?logo=mistralai&logoColor=fff)](#installation)
+[![Testé dans Claude Code](https://img.shields.io/badge/test%C3%A9%20dans-Claude%20Code-191919?logo=claude&logoColor=white)](#installation)
+[![Testé dans Mistral Vibe](https://img.shields.io/badge/test%C3%A9%20dans-Mistral%20Vibe-FA520F?logo=mistralai&logoColor=white)](#installation)
 [![Standard Agent Skills](https://img.shields.io/badge/standard-Agent%20Skills-0A66C2)](https://agentskills.io)
 
 > **In English.** Agent skills for Claude and Mistral (Vibe), by Do Ingenia, a French SEO and GEO (Generative Engine Optimization) consultancy. They help experts turn tacit know-how into content that AI answer engines can cite, and measure what those engines say about a brand. Skills are written in French. Install instructions below work as is.
