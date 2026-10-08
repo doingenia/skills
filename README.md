@@ -1,8 +1,12 @@
 # Skills Do Ingenia
 
-> **In English.** Agent skills for Claude, by Do Ingenia, a French SEO and GEO (Generative Engine Optimization) consultancy. They help experts turn tacit know-how into content that AI answer engines can cite, and measure what those engines say about a brand. Skills are written in French. Install instructions below work as is.
+[![Testé dans Claude Code](https://img.shields.io/badge/test%C3%A9%20dans-Claude%20Code-191919?logo=claude&logoColor=fff)](#installation)
+[![Testé dans Mistral Vibe](https://img.shields.io/badge/test%C3%A9%20dans-Mistral%20Vibe-FA520F?logo=mistralai&logoColor=fff)](#installation)
+[![Standard Agent Skills](https://img.shields.io/badge/standard-Agent%20Skills-0A66C2)](https://agentskills.io)
 
-Les moteurs de réponse IA citent ce qu'ils ne peuvent pas inventer : le vécu terrain, les chiffres propriétaires, les cas réels. Ces skills pour Claude servent à extraire cette expertise, à la rendre citable et à mesurer ce que les IA disent de vous.
+> **In English.** Agent skills for Claude and Mistral (Vibe), by Do Ingenia, a French SEO and GEO (Generative Engine Optimization) consultancy. They help experts turn tacit know-how into content that AI answer engines can cite, and measure what those engines say about a brand. Skills are written in French. Install instructions below work as is.
+
+Les moteurs de réponse IA citent ce qu'ils ne peuvent pas inventer : le vécu terrain, les chiffres propriétaires, les cas réels. Ces skills pour Claude et Mistral servent à extraire cette expertise, à la rendre citable et à mesurer ce que les IA disent de vous.
 
 Ce sont des méthodes que nous utilisons chez Do Ingenia avec nos clients, adaptées pour fonctionner seules.
 
@@ -13,6 +17,14 @@ Ce sont des méthodes que nous utilisons chez Do Ingenia avec nos clients, adapt
 ```
 /plugin marketplace add doingenia/skills
 /plugin install doingenia-ecriture@doingenia-skills
+```
+
+**Mistral Vibe** : copiez le dossier du skill dans `~/.vibe/skills/`, puis relancez Vibe :
+
+```
+git clone https://github.com/doingenia/skills.git
+mkdir -p ~/.vibe/skills
+cp -R skills/plugins/ecriture/skills/relecture-anti-ia ~/.vibe/skills/
 ```
 
 **Tout outil compatible avec les Agent Skills** :

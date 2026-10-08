@@ -13,6 +13,8 @@ Dans Claude Code :
 /plugin install doingenia-ecriture@doingenia-skills
 ```
 
+Dans Mistral Vibe, copiez ce dossier dans `~/.vibe/skills/` (voir le [README du dépôt](../../../../README.md#installation)).
+
 Ou, avec tout outil compatible avec les Agent Skills :
 
 ```
