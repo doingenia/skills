@@ -17,6 +17,7 @@ Ce sont des méthodes que nous utilisons chez Do Ingenia avec nos clients, adapt
 ```
 /plugin marketplace add doingenia/skills
 /plugin install doingenia-ecriture@doingenia-skills
+/plugin install doingenia-geo@doingenia-skills
 ```
 
 **Mistral Vibe** : copiez le dossier du skill dans `~/.vibe/skills/`, puis relancez Vibe :
@@ -38,8 +39,9 @@ npx skills add doingenia/skills
 | Famille | Plugin | Skill | Ce qu'il fait | Documentation |
 |---|---|---|---|---|
 | Écriture | `doingenia-ecriture` | [`relecture-anti-ia`](plugins/ecriture/skills/relecture-anti-ia/) | Relit un texte et retire les tics d'écriture qui trahissent une rédaction par IA, sans rien inventer. | [Mode d'emploi](plugins/ecriture/skills/relecture-anti-ia/README.md) |
+| GEO | `doingenia-geo` | [`empreinte-externe`](plugins/geo/skills/empreinte-externe/) | Relève ce que le registre, Pappers, LinkedIn, Wikidata et Google disent de votre entreprise, le compare à votre site et liste les écarts à corriger. | [Mode d'emploi](plugins/geo/skills/empreinte-externe/README.md) |
 
-D'autres familles arrivent : expertise (interview d'expert, capitalisation), GEO (perception des IA, citabilité d'une page). Le détail de chaque skill est sur [doingenia.com/nos-outils/skills](https://doingenia.com/nos-outils/skills/).
+D'autres skills arrivent : expertise (interview d'expert, capitalisation) et de nouveaux outils GEO. Le détail de chaque skill est sur [doingenia.com/nos-outils/skills](https://doingenia.com/nos-outils/skills/).
 
 ## La philosophie
 
