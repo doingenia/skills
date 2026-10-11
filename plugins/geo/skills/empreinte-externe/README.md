@@ -59,7 +59,7 @@ Le skill lit les mentions légales de votre site pour trouver le SIREN. S'il n'e
 
 ## Sources consultées
 
-Votre site (mentions légales, À propos, contact), le registre de l'État (API Recherche d'entreprises), Pappers, LinkedIn, Wikidata, Wikipedia en français et la fiche Google telle que la recherche web la montre. Une source qui ne répond pas est notée dans le relevé, jamais passée sous silence.
+Votre site (mentions légales, À propos, contact), le registre de l'État (API Recherche d'entreprises), Pappers (avec societe.com en repli), LinkedIn, Wikidata, Wikipedia en français et la fiche Google telle que la recherche web la montre. Une source qui ne répond pas est notée dans le relevé, jamais passée sous silence.
 
 ## Ce que le skill ne fait pas
 

@@ -4,9 +4,9 @@
 [![Testé dans Mistral Vibe](https://img.shields.io/badge/test%C3%A9%20dans-Mistral%20Vibe-FA520F?logo=mistralai&logoColor=white)](#installation)
 [![Standard Agent Skills](https://img.shields.io/badge/standard-Agent%20Skills-0A66C2)](https://agentskills.io)
 
-> **In English.** Agent skills for Claude and Mistral (Vibe), by Do Ingenia, a French SEO and GEO (Generative Engine Optimization) consultancy. They help experts turn tacit know-how into content that AI answer engines can cite, and measure what those engines say about a brand. Skills are written in French. Install instructions below work as is.
+> **In English.** Agent skills for Claude and Mistral (Vibe), by Do Ingenia, a French SEO and GEO (Generative Engine Optimization) consultancy. They help experts turn tacit know-how into content that AI answer engines can cite, and check what third-party sources say about a company. Skills are written in French. Install instructions below work as is.
 
-Les moteurs de réponse IA citent ce qu'ils ne peuvent pas inventer : le vécu terrain, les chiffres propriétaires, les cas réels. Ces skills pour Claude et Mistral servent à extraire cette expertise, à la rendre citable et à mesurer ce que les IA disent de vous.
+Les moteurs de réponse IA citent ce qu'ils ne peuvent pas inventer : le vécu terrain, les chiffres propriétaires, les cas réels. Ces skills pour Claude et Mistral servent à extraire cette expertise, à la rendre citable et à vérifier ce que les sources tierces disent de vous.
 
 Ce sont des méthodes que nous utilisons chez Do Ingenia avec nos clients, adaptées pour fonctionner seules.
 

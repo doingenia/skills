@@ -81,6 +81,7 @@ Utiliser la recherche web et la lecture de pages disponibles. Aucune clé d'API 
 **Pappers**
 
 - Page publique `https://www.pappers.fr/entreprise/<SIREN>` : dénomination, nom commercial, forme juridique, date de création, activité, siège, dirigeants. Pappers reprend le registre : un écart avec le registre est une erreur de lecture ou de mise à jour, pas une correction à faire chez Pappers.
+- Si Pappers est inaccessible (par exemple une erreur 403), se rabattre sur la fiche societe.com de l'entreprise, trouvée par recherche web sur le **SIREN** (jamais sur le nom). Vérifier que la fiche porte bien ce SIREN. Dans la cellule du tableau, écrire « via societe.com : … » et le dire dans les limites. Si societe.com est aussi inaccessible, écrire « inaccessible ».
 
 **LinkedIn** (lu sans compte, donc partiel)
 
