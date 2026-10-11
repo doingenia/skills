@@ -45,6 +45,8 @@ Exemple : `Relève l'empreinte externe de Maison Verdier Conseil, maisonverdier-
 4. **Ne rien inventer.** Un fait introuvable s'écrit « non trouvé ». Une source qu'on n'a pas pu lire s'écrit « inaccessible » et figure dans les limites du relevé. Jamais de case remplie par déduction.
 5. **Ne rien modifier soi-même.** Le skill propose, l'utilisateur agit. Aucune fiche n'est éditée, aucun formulaire envoyé, aucune page revendiquée.
 6. **Ne jamais retenir un SIREN trouvé par une recherche sur le nom.** Une recherche par nom ne remonte que des homonymes. Le SIREN vient des mentions légales du site ou de l'utilisateur.
+7. **Rester dans le relevé.** Chaque fait écrit vient d'une source lue pendant ce relevé et listée sous le tableau. Aucune référence, aucun client, aucun chiffre tiré de sa mémoire ou d'une page qui n'est pas dans les sources.
+8. **Pas de conseil éditorial.** Le skill relève des désaccords entre sources. Il ne conseille ni style typographique, ni optimisation de fiche (horaires, photos, description), ni création de page Wikipedia.
 
 ## Étapes
 
@@ -109,17 +111,31 @@ Si l'utilisateur a collé des réponses d'assistants, extraire chaque affirmatio
 
 ### 5. Comparer et classer
 
-Remplir le tableau des faits (section Sortie), puis relever les écarts. Classer du plus structurant au plus mineur :
+Remplir le tableau des faits (section Sortie), puis relever les écarts.
+
+**Un écart, c'est :**
+- deux sources qui donnent des valeurs différentes pour le même fait ;
+- une entité confondue avec l'entreprise (doublon, homonyme qui occupe la place) ;
+- un lien manquant entre la marque, la raison sociale et le SIREN, quand la marque et la raison sociale diffèrent ;
+- une fiche qui devrait exister et que les sources montrent absente (par exemple un site qui renvoie vers une page LinkedIn introuvable).
+
+**Ce n'est pas un écart :** un fait absent d'une page où il n'a pas à figurer (la date de création n'est pas obligatoire dans les mentions légales), une différence de casse ou de ponctuation, un historique (ancien siège), une fiche qui n'existe pas faute de notoriété, un fait confirmé partout. Ne rien remplir pour atteindre un nombre.
+
+Classer du plus structurant au plus mineur :
 
 1. une entité confondue avec l'entreprise (doublon, homonyme qui occupe la place) ;
 2. un lien manquant entre la marque, la raison sociale et le SIREN ;
 3. un fait d'identité qui diverge (forme juridique, date de création, dirigeants, siège, activité) ;
-4. une fiche absente, non revendiquée ou périmée ;
-5. un détail de forme (orthographe, majuscules, libellé d'activité).
+4. une fiche attendue et introuvable, ou périmée ;
+5. un détail de forme qui change le sens (une orthographe de nom différente, un libellé d'activité contradictoire).
 
 ## Le tableau des faits
 
-Une colonne par source : Site, Registre, Pappers, LinkedIn, Wikidata/Wikipedia, Fiche Google. Les liens des sources sous le tableau. Les mêmes huit faits pour toutes les entreprises :
+Six colonnes, pas une de plus : Site, Registre, Pappers, LinkedIn, Wikidata/Wikipedia (une seule colonne pour les deux), Fiche Google. Les liens des sources sous le tableau. Règles de remplissage :
+
+- **Fiche Google** : seulement ce que la fiche elle-même montre. Un annuaire ou une page tierce qui la recopie n'est pas la fiche : écrire « non visible par la recherche web ».
+- **Pappers** : la date de création est celle de l'entreprise, pas celle d'un établissement ou d'un transfert de siège. Si elle n'est pas lisible, « non trouvé ». Un repli sur societe.com s'écrit « via societe.com : … » dans chaque cellule concernée.
+- **Dirigeants** : nom d'usage et fonction (« Prénom Nom, président »). Pas les prénoms d'état civil complets. Les mêmes huit faits pour toutes les entreprises :
 
 | Fait | À lire |
 |---|---|
@@ -147,14 +163,14 @@ Le tableau ci-dessus, avec les liens des sources dessous. Si le relevé est part
 Numérotés, du plus structurant au plus mineur. Pour chacun :
 
 - **ce qui diffère**, et entre quelles sources ;
-- **l'action** : corriger, fermer, revendiquer, déclarer ou créer ;
+- **l'action** : corriger, fermer, revendiquer, déclarer ou créer. « Créer » ne concerne que ce qui est attendu et manquant (par exemple une page de mentions légales, un nom commercial non déclaré) ;
 - **où la faire**. Repères : un nom commercial ou une forme juridique se déclarent au registre, par le guichet unique des formalités d'entreprises ; une fiche Google se revendique depuis le compte de gestion de la fiche ; un doublon de page LinkedIn se signale à LinkedIn par le formulaire d'aide, depuis la page à fermer ; une entité Wikidata ne se crée que si des sources indépendantes décrivent l'entreprise ; Pappers reprend le registre, donc se corrige à la source.
 
 S'il n'y a aucun écart, le dire en une phrase plutôt que d'en chercher.
 
 ### 3. Homonymes
 
-Lesquels risquent d'être confondus avec l'entreprise, et pourquoi (même nom, même secteur, même zone, fiche plus visible que celle de l'entreprise).
+Seulement les structures qui portent **le même nom** que la marque ou la raison sociale (ou le même nom avec une forme juridique différente). Un nom proche, une partie du nom ou un homonyme étranger sans lien avec le secteur ou la zone n'est pas un homonyme : ne pas le lister. Pour chacun, dire pourquoi la confusion est plausible (même secteur, même zone, fiche plus visible que celle de l'entreprise). Ne pas attribuer de niveau de risque (« élevé », « faible ») sans élément qui l'étaye. Aucun homonyme exact : le dire en une phrase.
 
 - Une société dont l'entreprise est dirigeante, ou qui la dirige, ou qui est citée par le site comme appartenant au même groupe, n'est pas un homonyme : c'est une société liée. La signaler comme une question à l'utilisateur (« cette société fait-elle partie de votre groupe ? »).
 - Les entrepreneurs individuels homonymes sont comptés, pas nommés : leur nom est celui d'une personne. Sur un nom très courant, le registre renvoie des milliers de résultats : lire la première page, affiner par département ou activité si possible, et écrire « non comptés » plutôt qu'un zéro que rien ne prouve.
