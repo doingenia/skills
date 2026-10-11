@@ -23,7 +23,7 @@ npx skills add doingenia/skills
 
 Aucune clé d'API ni compte n'est nécessaire. Le skill utilise la recherche web et la lecture de pages de l'outil qui l'exécute.
 
-Testé avec Claude Code et avec Mistral Vibe. Dans Vibe, indiquez le dossier `plugins/geo/skills` dans `skill_paths` (fichier `~/.vibe/config.toml`).
+Testé avec Claude Code et avec Mistral Vibe. Dans Vibe, copiez le dossier du skill dans `~/.vibe/skills/` (voir le [README du dépôt](../../../../README.md#installation)).
 
 ## Utilisation
 

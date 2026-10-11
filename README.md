@@ -26,6 +26,7 @@ Ce sont des méthodes que nous utilisons chez Do Ingenia avec nos clients, adapt
 git clone https://github.com/doingenia/skills.git
 mkdir -p ~/.vibe/skills
 cp -R skills/plugins/ecriture/skills/relecture-anti-ia ~/.vibe/skills/
+cp -R skills/plugins/geo/skills/empreinte-externe ~/.vibe/skills/
 ```
 
 **Tout outil compatible avec les Agent Skills** :
