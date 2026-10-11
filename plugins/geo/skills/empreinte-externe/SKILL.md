@@ -52,7 +52,7 @@ Exemple : `Relève l'empreinte externe de Maison Verdier Conseil, maisonverdier-
 
 ### 1. Lire le site
 
-Lire les mentions légales, la page À propos et la page contact. Pour les trouver, suivre les liens du menu et du pied de page de l'accueil, puis essayer les chemins usuels (`/mentions-legales/`, `/a-propos/`, `/contact/`). Une page introuvable est notée dans les limites. Pour les mentions légales, lire la page en entier : la forme juridique, le capital et le RCS arrivent parfois après une longue politique de confidentialité.
+Lire les mentions légales, la page qui présente l'entreprise (À propos, Le cabinet, Qui sommes-nous, selon le site) et la page contact. Pour les trouver, suivre les liens du menu et du pied de page de l'accueil, puis essayer les chemins usuels (`/mentions-legales/`, `/a-propos/`, `/contact/`). Une page introuvable est notée dans les limites. Pour les mentions légales, lire la page en entier : la forme juridique, le capital et le RCS arrivent parfois après une longue politique de confidentialité.
 
 En tirer les faits d'identité tels que le site les annonce : nom de marque, raison sociale, forme juridique, date de création ou « depuis », dirigeants, activité, siège et zones d'intervention, appartenance à un groupe. Chercher aussi le SIREN, qui peut s'écrire :
 
@@ -77,6 +77,7 @@ Utiliser la recherche web et la lecture de pages disponibles. Aucune clé d'API 
 - `https://recherche-entreprises.api.gouv.fr/search?q=<SIREN>` : garder le résultat dont le `siren` est exactement celui cherché. Lire `nom_complet`, `nom_raison_sociale`, `sigle`, le nom commercial et les enseignes du siège, `nature_juridique` (un code à traduire, par exemple 5710 pour une SAS), `activite_principale` (code NAF), `date_creation`, `etat_administratif`, `dirigeants` (nom, prénoms ou dénomination, qualité ; les commissaires aux comptes ne sont pas des dirigeants), `siege.adresse`, le nombre d'établissements.
 - Si l'outil de lecture résume la réponse au lieu de la donner brute, demander les champs un par un et recopier la date de création et le code juridique tels quels : un résumé peut les déformer. En cas de doute entre deux lectures, relire.
 - Le registre peut renvoyer des dates de naissance de dirigeants : les ignorer (garde-fou 3).
+- Recopier les codes (NAF, forme juridique) exactement comme le registre les renvoie. Ne jamais en compléter ou en déduire un.
 - Le nom du registre doit correspondre à l'entreprise du site. Sinon, le dire et demander confirmation du SIREN.
 - Une seconde recherche, `?q=<nom>&per_page=10`, **uniquement pour repérer les homonymes** : écarter l'entreprise elle-même, noter les autres structures au même nom ou à un nom proche.
 
@@ -119,7 +120,13 @@ Remplir le tableau des faits (section Sortie), puis relever les écarts.
 - un lien manquant entre la marque, la raison sociale et le SIREN, quand la marque et la raison sociale diffèrent ;
 - une fiche qui devrait exister et que les sources montrent absente (par exemple un site qui renvoie vers une page LinkedIn introuvable).
 
-**Ce n'est pas un écart :** un fait absent d'une page où il n'a pas à figurer (la date de création n'est pas obligatoire dans les mentions légales), une différence de casse ou de ponctuation, un historique (ancien siège), une fiche qui n'existe pas faute de notoriété, un fait confirmé partout. Ne rien remplir pour atteindre un nombre.
+**Ce n'est pas un écart :** un fait absent d'une page où il n'a pas à figurer (la date de création n'est pas obligatoire dans les mentions légales), une différence de casse ou de ponctuation, un historique (ancien siège), une fiche qui n'existe pas faute de notoriété, un fait confirmé partout, une taille ou un effectif donné en tranches compatibles, un nom commercial déclaré au registre mais que le site n'emploie pas.
+
+**Règles de comparaison :**
+- Le registre fait foi pour la date de création, la forme juridique et le siège. Un tiers qui donne une autre date est un écart seulement si sa page l'étiquette explicitement comme la date de création de l'entreprise. Une date d'immatriculation au RCS après un transfert de siège, ou la date d'un établissement, n'est pas une date de création.
+- Un nom commercial est un écart quand le site ou un tiers en emploie un que le registre ne porte pas : l'action est alors « déclarer ».
+- Ne jamais proposer d'ajouter une information au site si aucune source ne la contredit.
+- Ne pas proposer de formulation de remplacement qui affirme un fait qu'aucune source n'établit. Écrire « à vérifier avec le dirigeant » et laisser l'utilisateur trancher. Ne rien remplir pour atteindre un nombre.
 
 Classer du plus structurant au plus mineur :
 
@@ -134,7 +141,7 @@ Classer du plus structurant au plus mineur :
 Six colonnes, pas une de plus : Site, Registre, Pappers, LinkedIn, Wikidata/Wikipedia (une seule colonne pour les deux), Fiche Google. Les liens des sources sous le tableau. Règles de remplissage :
 
 - **Fiche Google** : seulement ce que la fiche elle-même montre. Un annuaire ou une page tierce qui la recopie n'est pas la fiche : écrire « non visible par la recherche web ».
-- **Pappers** : la date de création est celle de l'entreprise, pas celle d'un établissement ou d'un transfert de siège. Si elle n'est pas lisible, « non trouvé ». Un repli sur societe.com s'écrit « via societe.com : … » dans chaque cellule concernée.
+- **Pappers** : la date de création est celle de l'entreprise, pas celle d'un établissement ou d'un transfert de siège. Si elle n'est pas lisible, « non trouvé ». Quand Pappers est inaccessible et qu'on se rabat sur societe.com, l'en-tête de colonne devient « Pappers (via societe.com) » et chaque cellule porte « via societe.com : … ».
 - **Dirigeants** : nom d'usage et fonction (« Prénom Nom, président »). Pas les prénoms d'état civil complets. Les mêmes huit faits pour toutes les entreprises :
 
 | Fait | À lire |
@@ -217,7 +224,7 @@ Entreprise fictive : **Maison Verdier Conseil**, site `maisonverdier-exemple.fr`
 **Écarts à corriger**
 
 1. **Deux pages LinkedIn pour la même entreprise.** La page principale (Lyon, 12 salariés) et une page ancienne « Verdier Conseil » (Villeurbanne, 1 salarié, aucune activité). Action : fermer ou fusionner la page ancienne, depuis son formulaire d'aide.
-2. **Date de création : 2009 sur le site et sur LinkedIn, 2016 au registre.** À vérifier avec le dirigeant : si 2009 est la date de début d'activité sous une autre forme, l'écrire sur le site (« activité depuis 2009, société créée en 2016 »). Action : corriger le site.
+2. **Date de création : 2009 sur le site et sur LinkedIn, 2016 au registre.** À vérifier avec le dirigeant, puis corriger la source qui se trompe. Le registre fait foi pour la création de la société. Action : corriger le site si le registre est juste.
 3. **Forme juridique : SARL sur le site, SAS au registre.** Action : corriger les mentions légales.
 
 **Erreurs des IA rapprochées** (une IA annonçait « fondée en 2009 ») : cohérent avec l'écart 2, non prouvé : l'IA ne cite aucune source.
