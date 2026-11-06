@@ -27,6 +27,7 @@ git clone https://github.com/doingenia/skills.git
 mkdir -p ~/.vibe/skills
 cp -R skills/plugins/ecriture/skills/relecture-anti-ia ~/.vibe/skills/
 cp -R skills/plugins/geo/skills/empreinte-externe ~/.vibe/skills/
+cp -R skills/plugins/geo/skills/optimisation-geo ~/.vibe/skills/
 ```
 
 **Tout outil compatible avec les Agent Skills** :
@@ -41,6 +42,7 @@ npx skills add doingenia/skills
 |---|---|---|---|---|
 | Écriture | `doingenia-ecriture` | [`relecture-anti-ia`](plugins/ecriture/skills/relecture-anti-ia/) | Relit un texte et retire les tics d'écriture qui trahissent une rédaction par IA, sans rien inventer. | [Mode d'emploi](plugins/ecriture/skills/relecture-anti-ia/README.md) |
 | GEO | `doingenia-geo` | [`empreinte-externe`](plugins/geo/skills/empreinte-externe/) | Relève ce que le registre, Pappers, LinkedIn, Wikidata et Google disent de votre entreprise, le compare à votre site et liste les écarts à corriger. | [Mode d'emploi](plugins/geo/skills/empreinte-externe/README.md) |
+| GEO | `doingenia-geo` | [`optimisation-geo`](plugins/geo/skills/optimisation-geo/) | Rend vos articles citables par les IA, pour le SEO et GEO et le référencement IA : ajoute en surligné le résumé, le tableau ou la FAQ qui manquent, sans réécrire l'auteur, avec contrôle mot pour mot. | [Mode d'emploi](plugins/geo/skills/optimisation-geo/README.md) |
 
 D'autres skills arrivent : expertise (interview d'expert, capitalisation) et de nouveaux outils GEO. Le détail de chaque skill est sur [doingenia.com/nos-outils/skills](https://doingenia.com/nos-outils/skills/).
 

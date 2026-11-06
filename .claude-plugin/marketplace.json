@@ -6,7 +6,7 @@
   },
   "metadata": {
     "description": "Skills Claude de Do Ingenia : extraire l'expertise, la rendre citable par les IA, vérifier ce que les sources tierces disent de vous.",
-    "version": "0.3.0"
+    "version": "0.4.0"
   },
   "plugins": [
     {
@@ -26,8 +26,8 @@
     {
       "name": "doingenia-geo",
       "source": "./plugins/geo",
-      "description": "Skills GEO : relever ce que les sources tierces disent de votre entreprise et lister les écarts à corriger.",
-      "version": "0.1.0",
+      "description": "Skills GEO : relever ce que les sources tierces disent de votre entreprise, et rendre vos articles citables par les IA sans les réécrire.",
+      "version": "0.2.0",
       "author": {
         "name": "Do Ingenia",
         "url": "https://doingenia.com"
@@ -35,7 +35,7 @@
       "homepage": "https://doingenia.com/nos-outils/skills/",
       "repository": "https://github.com/doingenia/skills",
       "license": "CC-BY-4.0",
-      "keywords": ["geo", "ia", "entite", "e-reputation", "llm"]
+      "keywords": ["geo", "ia", "entite", "e-reputation", "llm", "seo", "citabilite"]
     }
   ]
 }
