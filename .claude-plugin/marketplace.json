@@ -6,14 +6,14 @@
   },
   "metadata": {
     "description": "Skills Claude de Do Ingenia : extraire l'expertise, la rendre citable par les IA, vérifier ce que les sources tierces disent de vous.",
-    "version": "0.4.0"
+    "version": "0.5.0"
   },
   "plugins": [
     {
       "name": "doingenia-ecriture",
       "source": "./plugins/ecriture",
-      "description": "Skills d'écriture : relire un texte pour retirer les tics qui trahissent une rédaction par IA.",
-      "version": "0.2.2",
+      "description": "Skills d'écriture : relire un texte pour retirer les tics qui trahissent une rédaction par IA, et humaniser un texte écrit par une IA sans changer ce qu'il dit.",
+      "version": "0.3.0",
       "author": {
         "name": "Do Ingenia",
         "url": "https://doingenia.com"
@@ -21,7 +21,7 @@
       "homepage": "https://doingenia.com/nos-outils/skills/",
       "repository": "https://github.com/doingenia/skills",
       "license": "CC-BY-4.0",
-      "keywords": ["ecriture", "relecture", "redaction", "anti-ia", "contenu"]
+      "keywords": ["ecriture", "relecture", "redaction", "anti-ia", "contenu", "humaniser"]
     },
     {
       "name": "doingenia-geo",

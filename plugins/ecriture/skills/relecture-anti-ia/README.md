@@ -50,7 +50,7 @@ Lancé sans texte, le skill affiche son aide et vous demande le texte à relire.
 
 | Ce que vous écrivez | Effet |
 |---|---|
-| `diagnostic seul` | Le tableau des problèmes, sans réécriture. |
+| `diagnostic seul` | Le tableau des problèmes et la matière à fournir, sans réécriture. À utiliser avant `humaniser`. |
 | `en fichier` ou `en Markdown` | La sortie est écrite dans un fichier `.md`. Automatique quand vous fournissez un fichier. |
 | `mot-clé : …` | Le mot-clé principal à protéger. Sinon, il est déduit du titre. |
 | `c'est une page de service`, `c'est un post LinkedIn`… | Le type de texte. Sinon, il est déduit. |
@@ -90,6 +90,16 @@ Le détail de chaque règle est dans [SKILL.md](SKILL.md).
 - **Il ne touche pas aux citations.**
 - **Il ne réécrit pas votre voix** : votre vocabulaire et votre registre restent les vôtres.
 - **Il ne rend pas un texte vide intéressant.** Si le fond manque, il vous le dit.
+
+## Avec humaniser
+
+Le même plugin contient [humaniser](../humaniser/README.md), qui réécrit la prose d'un texte dans une voix, sans toucher à sa structure. Pour les utiliser ensemble, dans cet ordre :
+
+1. **relecture-anti-ia en `diagnostic seul`** : le tableau des problèmes (ouverture, conclusion, structure…) et la matière à fournir, avec la question à vous poser pour chaque manque, sans réécriture.
+2. **Vous corrigez votre texte d'origine** d'après le diagnostic.
+3. **`/humaniser`** ensuite, sur ce texte, pour la prose et la voix.
+
+Pourquoi le diagnostic seul : la version corrigée du mode complet est déjà une réécriture, et humaniser en ferait une seconde, dont l'effet sur la voix n'est pas mesuré. Dans l'autre ordre, la relecture modifierait la structure qu'humaniser a laissée intacte.
 
 ## Versions
 

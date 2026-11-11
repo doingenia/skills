@@ -1,6 +1,6 @@
 ---
 name: relecture-anti-ia
-description: Relit un texte en français (article, page de site, newsletter, post) pour retirer les tics d'écriture qui trahissent une rédaction par IA, sans inventer de faits et sans perdre le mot-clé visé. Produit un diagnostic règle par règle, une version corrigée et la liste des endroits où il manque de la matière terrain, dans la conversation ou dans un fichier Markdown. À utiliser quand on demande de « relire », « humaniser », « rendre moins IA », « retirer les marqueurs IA » ou de vérifier qu'un texte ne sonne pas généré. Mode « diagnostic seul » sur demande.
+description: Relit un texte en français (article, page de site, newsletter, post) pour retirer les tics d'écriture qui trahissent une rédaction par IA, sans inventer de faits et sans perdre le mot-clé visé. Produit un diagnostic règle par règle, une version corrigée et la liste des endroits où il manque de la matière terrain, dans la conversation ou dans un fichier Markdown. À utiliser quand on demande de « relire », « rendre moins IA », « retirer les marqueurs IA » ou de vérifier qu'un texte ne sonne pas généré. Mode « diagnostic seul » sur demande.
 argument-hint: "[texte ou @fichier] [diagnostic seul] [en fichier] [mot-clé : …]"
 ---
 
@@ -15,7 +15,7 @@ Il ne rend pas un texte « humain » en lui ajoutant de faux souvenirs. Ce qui r
 - Le texte à relire, collé dans la conversation ou fourni sous forme de fichier (chemin ou pièce jointe).
 - Facultatif : le type de texte (article, page de service, post, newsletter) et le public visé. S'ils ne sont pas donnés, les déduire du texte sans poser de question.
 - Facultatif : le mot-clé principal visé. S'il n'est pas donné, le déduire du titre (ou du champ de mot-clé si le fichier en a un) et l'indiquer en tête du diagnostic.
-- Facultatif : « diagnostic seul ». Dans ce cas, produire uniquement la partie 1 de la sortie et ne pas réécrire.
+- Facultatif : « diagnostic seul ». Dans ce cas, produire les parties 1 et 3 de la sortie, sans la partie 2, et ne pas réécrire. C'est le mode à utiliser avant `humaniser` : l'auteur corrige son texte d'après le diagnostic, puis lance `/humaniser`.
 - Facultatif : « en fichier » ou « en Markdown ». Voir la section « Où rendre la sortie ».
 
 **Si aucun texte ni fichier n'accompagne la demande**, ne jamais reprendre de soi-même un texte vu plus tôt dans la conversation : afficher l'aide (section suivante) et demander le texte à relire. Reprendre un texte précédent seulement si l'utilisateur le demande explicitement (« relis le texte précédent »).
@@ -26,7 +26,7 @@ Si l'utilisateur demande « aide », « options » ou comment utiliser le skill,
 
 | Ce que vous écrivez | Effet |
 |---|---|
-| `diagnostic seul` | Le tableau des problèmes, sans réécriture. |
+| `diagnostic seul` | Le tableau des problèmes et la matière à fournir, sans réécriture. |
 | `en fichier` ou `en Markdown` | La sortie est écrite dans un fichier `.md` (automatique quand un fichier est fourni). |
 | `mot-clé : …` | Le mot-clé principal à protéger. Sinon, il est déduit du titre. |
 | `c'est une page de service`, `c'est un post LinkedIn`… | Le type de texte. Sinon, il est déduit. |
@@ -141,7 +141,7 @@ Le texte complet réécrit, en Markdown propre (titres, listes, gras conservés)
 
 En tête, le verdict du test ChatGPT (règle 18). Puis :
 
-- la liste des marqueurs `[À COMPLÉTER]`, chacun avec la question précise à poser à l'auteur pour obtenir la matière manquante (par exemple : « Avez-vous un client pour qui cette méthode n'a pas fonctionné ? Que s'est-il passé ? ») ;
+- la liste des marqueurs `[À COMPLÉTER]`, chacun avec la question précise à poser à l'auteur pour obtenir la matière manquante (par exemple : « Avez-vous un client pour qui cette méthode n'a pas fonctionné ? Que s'est-il passé ? ») ; en mode « diagnostic seul », il n'y a pas de marqueur : chaque manque est désigné par l'extrait du texte original où il se situe, suivi de la même question ;
 - les incohérences relevées à l'étape 3, à trancher par l'auteur ;
 - les autres points d'attention éventuels (typographie à harmoniser, mot-clé déplacé).
 
@@ -165,7 +165,7 @@ test_chatgpt: "réussi" ou "insuffisant"
 ---
 ```
 
-Puis les trois parties, sous les titres `## 1. Diagnostic`, `## 2. Version corrigée` et `## 3. Matière à fournir par l'auteur`.
+Puis les trois parties, sous les titres `## 1. Diagnostic`, `## 2. Version corrigée` et `## 3. Matière à fournir par l'auteur`. En mode « diagnostic seul », la partie 2 est omise et les titres gardent leur numéro.
 
 ## Exemple court
 

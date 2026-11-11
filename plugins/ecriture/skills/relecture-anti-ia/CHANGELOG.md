@@ -1,5 +1,14 @@
 # relecture-anti-ia : journal des versions
 
+## 0.2.4
+
+- « diagnostic seul » rend aussi la partie 3 (test ChatGPT, matière à fournir, incohérences), sans réécriture ; chaque manque est désigné par son extrait, faute de marqueur. C'est le mode à utiliser avant `humaniser`.
+
+## 0.2.3
+
+- « humaniser » retiré des déclencheurs : ce mot désigne désormais la skill `humaniser` du même plugin.
+- README : ordre d'enchaînement avec `humaniser` (relecture en diagnostic seul, l'auteur corrige son texte, puis humaniser).
+
 ## 0.2.2
 
 - Lancé sans texte ni fichier, le skill affiche l'aide et demande le texte au lieu de reprendre un texte précédent.
