@@ -10,6 +10,8 @@
 - Registre soutenu, institutionnel, juridique ou de santé tenu : ni « on » ni « il faut » réintroduits.
 - Compte rendu : chaque passage cité est copié du fichier, jamais reconstitué de mémoire.
 - Coquilles et fautes : renvoyées à une relecture orthographique, humaine ou avec un correcteur.
-- Script `mesurer_rythme.py` : dispersion de la longueur des phrases avant et après, cible de 60 % de coefficient de variation.
+- Script `mesurer_rythme.py` : dispersion de la longueur des phrases avant et après. Cible : au moins 60 % de coefficient de variation, et jamais moins que l'original.
+- Contrôle des faits étendu aux nombres écrits en lettres et à ceux des phrases d'annonce.
 - Liste des tournures en neuf familles, exemples avant et après à l'échelle du paragraphe, études citées avec leurs limites.
-- Jeu d'essais du comparatif du 11/11/2026 avec blader/humanizer et samber humaniseur-fr, à rejouer.
+- Jeu d'essais du comparatif avec blader/humanizer et samber humaniseur-fr (trois essais du 11/11/2026, le dernier sur cette version), à rejouer.
+- Testé avec Claude Code.

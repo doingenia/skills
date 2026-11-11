@@ -3,9 +3,9 @@ humanise: 2026-11-11
 humanise_source: "texte.md"
 ---
 Rénovation de salle de bains : combien ça coûte et comment choisir son artisan
-Refaire sa salle de bains coûte en moyenne entre 400 € et 2 000 € par m², soit environ 12 000 € pour une rénovation complète. L'écart est énorme, et il tient à la nature des travaux, à la plomberie, aux matériaux et à la région.
+Refaire sa salle de bains coûte en moyenne entre 400 € et 2 000 € par m², soit environ 12 000 € pour une rénovation complète. Un tel écart s'explique par la nature des travaux, la plomberie, les matériaux et la région. Reste à estimer votre budget, puis à trouver l'artisan qui le respectera.
 Les prix selon l'ampleur des travaux
-Les chantiers se rangent en niveaux, et chacun a sa fourchette de prix au m², main-d'œuvre comprise.
+Les chantiers se rangent en trois niveaux, chacun avec sa fourchette de prix au m², main-d'œuvre comprise.
 Type de rénovation
 Ce qu'elle comprend
 Prix indicatif
@@ -21,28 +21,28 @@ Dépose totale, plomberie, électricité, revêtements, équipements
 Création ou haut de gamme
 Nouvelle pièce, matériaux nobles, sur-mesure
 jusqu'à 3 300 €/m²
-Ce qui surprend souvent, c'est que plus la pièce est petite, plus le m² coûte cher, parce que les frais fixes (plomberie, évacuation, raccordements) pèsent autant dans 4 m² que dans 10 m². Une grande salle de bains amortit mieux ces dépenses.
+Plus la pièce est petite, plus le m² coûte cher, ce qui surprend souvent. Les frais fixes (plomberie, évacuation, raccordements) pèsent autant dans 4 m² que dans 10 m², si bien qu'une grande salle de bains les amortit mieux.
 Les postes qui font grimper la facture
 Quatre postes expliquent l'essentiel des écarts entre deux devis.
-• La plomberie. Déplacer une douche ou des WC oblige à refaire les arrivées et les évacuations, et le meilleur moyen d'économiser reste de garder les équipements à leur place.
-• La douche à l'italienne. Très demandée, elle exige une étanchéité soignée et une pente vers l'évacuation. On compte souvent plusieurs milliers d'euros, selon le sol existant.
-• Les revêtements. La pose de carrelage tourne autour de 40 à 80 €/m², hors fourniture, et les grands formats, la mosaïque et le béton ciré coûtent plus cher à poser.
-• Les équipements. Un meuble vasque d'entrée de gamme et un modèle sur-mesure peuvent varier du simple au décuple, comme la robinetterie et le sèche-serviettes.
-Il faut y ajouter la dépose de l'ancienne salle de bains, l'évacuation des gravats et une éventuelle remise aux normes électriques. Gardez enfin une marge de 10 % pour les imprévus : murs abimés, tuyaux vétustes, plancher à reprendre.
+• La plomberie. Déplacer une douche ou des WC oblige à refaire les arrivées et les évacuations ; garder les équipements à leur place est le meilleur moyen d'économiser.
+• La douche à l'italienne. Très demandée, elle exige une étanchéité soignée et une pente vers l'évacuation. Comptez souvent plusieurs milliers d'euros, selon le sol existant.
+• Les revêtements. La pose de carrelage tourne autour de 40 à 80 €/m², hors fourniture. Les grands formats, la mosaïque et le béton ciré coûtent plus cher à poser.
+• Les équipements. Entre un meuble vasque d'entrée de gamme et un modèle sur-mesure, le prix peut varier du simple au décuple. Même logique pour la robinetterie et le sèche-serviettes.
+Ajoutez la dépose de l'ancienne salle de bains, l'évacuation des gravats et une éventuelle remise aux normes électriques, puis gardez une marge de 10 % pour les imprévus : murs abimés, tuyaux vétustes, plancher à reprendre.
 Les aides qui allègent le budget
-Le premier levier est accessible à tous : la TVA réduite à 10 % sur les travaux réalisés par un professionnel dans un logement de plus de deux ans. Elle s'applique à la main-d'œuvre et aux équipements qu'il fournit et pose.
-Le second est plus ciblé. MaPrimeAdapt', gérée par l'Anah et reconduite en 2026, finance 50 % ou 70 % des travaux d'adaptation (douche de plain-pied, WC rehaussés, barres d'appui, sol antidérapant) pour les ménages modestes et très modestes âgés de 70 ans et plus, de 60 à 69 ans en perte d'autonomie, ou en situation de handicap. La demande se fait en ligne, avant le début des travaux.
+D'abord la TVA réduite à 10 %, ouverte à tous : elle s'applique aux travaux réalisés par un professionnel dans un logement de plus de deux ans, et couvre la main-d'œuvre comme les équipements qu'il fournit et pose.
+Ensuite MaPrimeAdapt', gérée par l'Anah et reconduite en 2026, plus ciblée. Elle finance 50 % ou 70 % des travaux d'adaptation (douche de plain-pied, WC rehaussés, barres d'appui, sol antidérapant). Elle vise les ménages modestes et très modestes âgés de 70 ans et plus, de 60 à 69 ans en perte d'autonomie, ou en situation de handicap. La demande se fait en ligne, avant le début des travaux.
 Pensez aussi à votre caisse de retraite et à votre mairie : certaines proposent des aides complémentaires.
 Comment bien choisir son artisan
-Un bon artisan vous coûtera parfois un peu plus cher au devis, mais beaucoup moins cher à l'arrivée.
-1. Demandez trois devis. C'est le minimum pour situer les prix. Méfiez-vous autant du devis très bas que du devis anormalement élevé.
-2. Exigez un devis détaillé. Chaque poste doit apparaître : dépose, plomberie, électricité, fournitures, pose, délais. Un forfait global sans détail ne permet aucune comparaison.
-3. Vérifiez l'assurance décennale. Demandez l'attestation à jour, car elle couvre les défauts graves, comme une fuite sous une douche à l'italienne.
-4. Contrôlez l'existence de l'entreprise. Il suffit de quelques secondes pour vérifier un numéro SIRET sur annuaire-entreprises.data.gouv.fr.
+Un bon artisan vous coûtera parfois un peu plus cher au devis, mais beaucoup moins cher à l'arrivée. Sept points à vérifier.
+1. Demandez trois devis. C'est le minimum pour situer les prix, et mieux vaut se méfier autant du devis très bas que du devis anormalement élevé.
+2. Exigez un devis détaillé. Chaque poste doit apparaître : dépose, plomberie, électricité, fournitures, pose, délais. Sans détail, un forfait global ne permet aucune comparaison.
+3. Vérifiez l'assurance décennale. Demandez l'attestation à jour : elle couvre les défauts graves, comme une fuite sous une douche à l'italienne.
+4. Contrôlez l'existence de l'entreprise. Un numéro SIRET se vérifie en quelques secondes sur annuaire-entreprises.data.gouv.fr.
 5. Regardez ses réalisations. Photos de chantiers, avis clients vérifiables et, si possible, un ancien client à appeler.
 6. Préférez un interlocuteur unique. Une salle de bains mêle plombier, électricien, carreleur et menuisier, et un artisan qui coordonne tous les corps de métier vous évite les retards en cascade.
 7. Limitez l'acompte. Un acompte de 30 % à la commande est courant ; au-delà, négociez un paiement échelonné selon l'avancement.
-Enfin, fiez-vous à votre impression lors de la visite. Un artisan qui prend des mesures, pose des questions et vous signale des risques est un bon signe.
+Enfin, fiez-vous à votre impression lors de la visite : un artisan qui prend des mesures, pose des questions et vous signale des risques est un bon signe.
 FAQ
 Combien de temps durent les travaux ? Comptez une à deux semaines pour un rafraîchissement, et trois à cinq semaines pour une rénovation complète. Ajoutez le délai de disponibilité de l'artisan, souvent de plusieurs semaines.
 Peut-on garder sa baignoire et changer le reste ? Oui. Conserver les équipements à leur place limite les travaux de plomberie et réduit nettement la facture.

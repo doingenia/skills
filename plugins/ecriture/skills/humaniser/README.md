@@ -1,8 +1,8 @@
 # humaniser
 
-**Humaniser un texte français écrit par une IA, sans changer ce qu'il dit.** Donnez un article, une page ou une newsletter rédigés par une IA : le skill en réécrit la prose pour qu'elle se lise comme celle d'un humain qui connaît son sujet. Aucun fait n'est perdu ni inventé, le titre, les intertitres, les tableaux et la FAQ restent en place, et un script mesure le rythme des phrases avant et après.
+**Humaniser un texte français écrit par une IA, sans changer ce qu'il dit.** Donnez un article, une page ou une newsletter rédigés par une IA : le skill en réécrit la prose pour qu'elle se lise comme celle d'un humain qui connaît son sujet. Il est fait pour ne perdre ni inventer aucun fait, et contrôle chacun ; le titre, les intertitres, les tableaux et la FAQ restent en place, et un script mesure le rythme des phrases avant et après.
 
-Il ne promet pas de passer les détecteurs. Dans notre comparatif, les huit textes, originaux compris, sont jugés écrits par une IA à 100 % par Pangram, quelle que soit la skill qui les a réécrits.
+Il ne promet pas de passer les détecteurs. Dans le premier essai de notre comparatif, les huit textes, originaux compris, sont jugés écrits par une IA à 100 % par Pangram, quelle que soit la skill qui les a réécrits.
 
 ## Installation
 
@@ -21,7 +21,7 @@ npx skills add doingenia/skills
 
 Aucune clé d'API ni compte n'est nécessaire. Le script de mesure du rythme est en Python, sans dépendance : il faut un outil qui peut lancer Python et écrire des fichiers. Sans cela, le skill réécrit quand même le texte et dit que le rythme n'a pas été mesuré.
 
-La version interne dont ce skill est tiré a été testée avec Claude Code (voir le comparatif). Cette version publique n'a pas encore été testée en l'état, ni dans Mistral Vibe.
+Testé avec Claude Code, sur les deux textes du comparatif. Pas encore testé dans Mistral Vibe.
 
 ## Utilisation
 
@@ -57,24 +57,28 @@ Le fichier de voix est le levier le plus sûr : une étude sur le français mont
 
 Nous avons comparé `/humaniser` aux deux skills d'humanisation les plus proches, [blader/humanizer](https://github.com/blader/humanizer) et [samber/cc-skills `humaniseur-fr`](https://github.com/samber/cc-skills), sur deux textes neufs, avec le même modèle, en sessions isolées, et une relecture des faits par un agent Claude en contexte vierge, sur des copies anonymisées, sans savoir quelle skill avait produit quelle version. Le protocole complet et les textes sont dans [essais/](essais/README.md).
 
-| | Faits (texte 1 / texte 2) | Rythme (texte 1 / texte 2) | Coût moyen par texte |
-|---|---|---|---|
-| Originaux | | 52 % / 64 % | |
-| `/humaniser` | 1 nuance adoucie / fidèle | **68 % / 66 %** | 0,28 $ |
-| blader/humanizer | 2 nuances, 1 ajout / 1 nuance | 54 % / 47 % | 0,13 $ |
-| samber humaniseur-fr | 3 ajouts / titre et 7 intertitres changés, 6 ajouts, 1 fait déformé | 55 % / 59 % | 0,17 $ |
+Résultats de la version de ce dépôt (0.1.0, essai 3) et des deux autres skills (essai 2) :
 
-Le rythme est le coefficient de variation de la longueur des phrases ; la cible du skill est 60 %.
+| | Faits, texte 1 | Faits, texte 2 | Rythme, texte 1 | Rythme, texte 2 | Coût moyen par texte |
+|---|---|---|---|---|---|
+| Originaux | | | 52 % | 64 % | |
+| `/humaniser` | 1 nuance adoucie | fidèle | 65 % | 66 % | 0,25 $ |
+| blader/humanizer | 1 ajout, 1 nuance | fidèle | 51 % | 64 % | 0,13 $ |
+| samber humaniseur-fr | 3 ajouts, 1 nuance, 1 liste mise en prose | 2 ajouts, 1 fait déformé, 2 nuances, 3 listes mises en prose | 59 % | 67 % | 0,17 $ |
 
-- **La plus fidèle.** Aucun fait perdu ni déformé sur les deux textes, une seule nuance adoucie. Sur le deuxième texte, samber a ajouté six affirmations, renommé le titre et sept intertitres, et transformé « quelques pièges » en « deux ou trois pièges » face à une liste de cinq.
-- **La seule à atteindre la cible de rythme**, sur les deux textes. Sur le texte 2, blader a fait baisser la dispersion de 64 à 47 %, samber de 64 à 59 %.
-- **Elle mesure au lieu d'estimer.** Un script calcule la dispersion des phrases avant et après, et le skill reprend les paragraphes trop réguliers tant que la cible n'est pas atteinte, ou dit pourquoi.
-- **Elle contrôle chaque fait par ce à quoi il se rapporte**, pas seulement par sa présence : un prix réécrit ne doit pas se lire comme une durée, et « avant tout » ne devient jamais « seul ».
-- **Elle ne touche pas à la structure** qui sert le référencement et la citation par les IA : titre, intertitres en question, tableaux, FAQ. blader autorise à changer la structure ; samber retire les blocs de FAQ, transforme en prose les tableaux qu'il juge superflus et compte les intertitres en question parmi les marques d'IA.
-- **Elle garde les précautions des secteurs réglementés** (santé, santé animale, finance, droit, fiscalité) et celles qu'impose votre guide. Elle ne retire qu'une précaution empilée sur une autre. blader ne protège que les mentions légales et de sécurité ; samber réduit les précautions sans exception de secteur.
-- **Elle n'invente rien.** Un détail ajouté vient de votre fichier de voix, et le compte rendu dit d'où ; sinon, le skill signale le manque et la question à poser.
+Le rythme est le coefficient de variation de la longueur des phrases ; la cible du skill est d'au moins 60 %, et jamais moins que l'original.
 
-**Sa limite** : elle coûte environ deux fois plus (0,28 $ contre 0,13 et 0,17 $ pour un texte d'environ 850 mots avec Claude Sonnet 5.5), parce qu'elle mesure, contrôle et reprend.
+Deux textes et un passage par skill et par essai ne permettent pas de conclure sur de petits écarts : les chiffres varient d'un passage à l'autre pour une même skill. Les trois essais, leurs écarts et leurs limites sont détaillés dans [essais/](essais/README.md). Ce qui se répète d'un essai à l'autre :
+
+- **Il garde la structure et n'ajoute aucun fait**, à chacun de ses six passages. samber, lui, ajoute des affirmations à chaque passage : il a transformé « quelques pièges » en « deux ou trois pièges » face à une liste de cinq, et « deux démarches distinctes » en « n'ont rien à voir l'une avec l'autre ». blader garde la structure, avec une fidélité proche.
+- **Il donne le rythme le plus varié trois fois sur quatre** dans les essais à trois skills, et atteint sa cible à chaque passage. Le seul passage où il faisait baisser le rythme de l'original (64 → 60 %, essai 2) a conduit à corriger la cible.
+- **Il mesure au lieu d'estimer.** Un script calcule la dispersion des phrases avant et après, et le skill reprend les paragraphes trop réguliers tant que la cible n'est pas atteinte, ou dit pourquoi.
+- **Il contrôle chaque fait par ce à quoi il se rapporte**, pas seulement par sa présence : un prix réécrit ne doit pas se lire comme une durée, « avant tout » ne devient jamais « seul », et un nombre écrit en lettres compte comme un chiffre. Ce dernier point vient d'un essai où « trois niveaux » avait disparu.
+- **Il ne touche pas à la structure** qui sert le référencement et la citation par les IA : titre, intertitres en question, tableaux, FAQ. blader autorise à changer la structure ; samber retire les blocs de FAQ, transforme en prose les tableaux qu'il juge superflus et compte les intertitres en question parmi les marques d'IA.
+- **Il garde les précautions des secteurs réglementés** (santé, santé animale, finance, droit, fiscalité) et celles qu'impose votre guide. Il ne retire qu'une précaution empilée sur une autre. blader ne protège que les mentions légales et de sécurité ; samber réduit les précautions sans exception de secteur.
+- **Il n'invente rien.** Un détail ajouté vient de votre fichier de voix, et le compte rendu dit d'où ; sinon, le skill signale le manque et la question à poser.
+
+**Ses limites** : il coûte plus cher (0,25 $ par texte d'environ 850 mots avec Claude Sonnet 5.5, contre 0,13 $ pour blader et 0,17 $ pour samber), parce qu'il mesure, contrôle et reprend. Et il n'a été essayé que sur deux articles de conseil grand public, sans fichier de voix.
 
 ## Les choix
 
@@ -99,7 +103,7 @@ Deux chiffres souvent repris (16 % d'erreurs de ChatGPT d'origine anglaise, « n
 
 ## Les détecteurs
 
-Dans le comparatif, Pangram juge les huit textes écrits par une IA à 100 % : les deux originaux et les six réécritures, quelle que soit la skill. Son éditeur annonce repérer 98,8 % des textes passés par un humaniseur. Un texte réécrit à la main par une rédactrice, dans un autre essai, était jugé humain à 100 %.
+Dans le premier essai du comparatif, Pangram juge les huit textes écrits par une IA à 100 % : les deux originaux et les six réécritures, quelle que soit la skill. Il n'a pas été mesuré aux essais suivants. Son éditeur annonce repérer 98,8 % des textes passés par un humaniseur. Un texte réécrit à la main par une rédactrice, dans un autre essai, était jugé humain à 100 %.
 
 Si votre but est de passer un détecteur, ce skill n'est pas l'outil. Il sert à rendre un texte agréable à lire et fidèle à ce qu'il dit.
 

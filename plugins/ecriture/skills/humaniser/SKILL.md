@@ -161,8 +161,9 @@ Les tournures ne suffisent pas. Relever aussi, sur tout le texte :
   `python3 <dossier de la skill>/scripts/mesurer_rythme.py "<texte>"`. Ce qui distingue un texte
   humain n'est pas la longueur moyenne mais l'écart entre phrases courtes et longues
   (`references/etudes.md`, § 1) : coefficient de variation de 78 % chez les présidents français
-  contre 50 % chez ChatGPT. Cible : un coefficient d'au moins 60 %, des phrases de moins de 12 mots
-  et quelques-unes de plus de 35 mots portées par une subordonnée, jamais une moyenne. Si un texte
+  contre 50 % chez ChatGPT. Cible : un coefficient d'au moins 60 %, **et jamais inférieur à celui
+  de l'original** (un texte qui part à 64 % ne finit pas à 60 %), avec des phrases de moins de
+  12 mots et quelques-unes de plus de 35 mots portées par une subordonnée, jamais une moyenne. Si un texte
   humain de référence est fourni avec `--voix`, le mesurer aussi et viser sa dispersion ;
 - **les attaques** : combien de phrases ou de paragraphes commencent par un intitulé suivi de
   deux-points, par le même mot, par un connecteur ;
@@ -203,9 +204,15 @@ juste après le prix, devient « Elle ne vaut que pour un logement standard », 
 du chantier. Le prix semble devenu une durée, et un contrôle par simple présence conclut « aucun
 fait perdu ».
 
-Dresser un tableau des faits du texte d'origine : chiffres, prix, durées, dates, noms propres,
-sources et liens, citations, affirmations (y compris « X et Y arrivent en même temps », les
-classements, les conditions).
+Dresser un tableau des faits du texte d'origine : chiffres, **y compris les nombres écrits en
+lettres** (« trois niveaux », « deux démarches », « quatre postes ») et ceux d'une phrase
+d'annonce, prix, durées, dates, noms propres, sources et liens, citations, affirmations (y compris
+« X et Y arrivent en même temps », les classements, les conditions).
+
+Supprimer une phrase d'annonce (famille A4) est permis, mais un nombre ou un fait qu'elle portait
+seule passe dans une autre phrase. Si ce nombre contredit le texte (« trois niveaux » devant un
+tableau de quatre lignes), le garder et le signaler dans le compte rendu, jamais le corriger en
+silence.
 
 | Fait | Se rapporte à | Phrase de la version finale qui le porte | Même rattachement ? |
 |---|---|---|---|
@@ -243,8 +250,9 @@ réécriture : oppositions « pas X mais Y », phrases de chute, groupes de troi
 
 Aucun paragraphe ne doit garder trois tournures ou plus.
 
-Mesurer le brouillon avec `scripts/mesurer_rythme.py`. Sous 60 % de coefficient de variation, le
-résultat n'est pas accepté tel quel, même sur un texte court :
+Mesurer le brouillon avec `scripts/mesurer_rythme.py`. Sous 60 % de coefficient de variation, ou
+sous le coefficient de l'original, le résultat n'est pas accepté tel quel, même sur un texte
+court :
 
 1. Repérer les paragraphes de prose dont toutes les phrases tombent entre 12 et 30 mots (les plus
    réguliers).
@@ -255,8 +263,8 @@ résultat n'est pas accepté tel quel, même sur un texte court :
 3. Mesurer de nouveau.
 
 Ce n'est pas une seconde passe sur tout le texte (règle 6), seulement sur ces paragraphes, et le
-contrôle des faits (étape 5) s'applique à chaque phrase touchée. Si le coefficient reste sous 60 %,
-le compte rendu nomme chaque paragraphe qui résiste et dit pourquoi (liste, citation, paragraphe
+contrôle des faits (étape 5) s'applique à chaque phrase touchée. Si le coefficient reste sous 60 % ou
+sous celui de l'original, le compte rendu nomme chaque paragraphe qui résiste et dit pourquoi (liste, citation, paragraphe
 d'une seule phrase) ; « le texte est court » n'est pas une raison.
 
 ---

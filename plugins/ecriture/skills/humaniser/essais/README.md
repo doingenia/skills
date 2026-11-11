@@ -37,42 +37,36 @@ ne figure dans le jeu de test.
 - **Rythme** : coefficient de variation de la longueur des phrases, mesuré par
   [`scripts/mesurer_rythme.py`](../scripts/mesurer_rythme.py) sur toutes les versions.
 
-Deux essais, le même jour (11/11/2026), dans ces conditions :
+Trois séries de passages, le même jour (11/11/2026), dans ces conditions :
 
 - **Essai 1** : version interne de `/humaniser`, dont cette version publique est tirée, et texte 1
-  avec sa ligne de date. Pangram mesuré.
-- **Essai 2** : version publique 0.1.0 de `/humaniser`, telle qu'elle est dans ce dépôt (sans ce
-  dossier d'essais), et texte 1 sans la ligne de date. Pangram non mesuré.
+  avec sa ligne de date. Les trois skills. Pangram mesuré.
+- **Essai 2** : première version publique de `/humaniser`, et texte 1 sans la ligne de date. Les
+  trois skills. Pangram non mesuré.
+- **Essai 3** : `/humaniser` seul, version publique 0.1.0 telle qu'elle est dans ce dépôt (sans ce
+  dossier d'essais). Elle corrige deux défauts vus à l'essai 2 : la cible de rythme acceptait une
+  baisse sous le rythme de l'original, et le contrôle des faits ignorait les nombres écrits en
+  lettres. Pangram non mesuré.
 
 ## Les résultats
 
-**Faits** (relecture en aveugle) :
+Un passage par skill, par texte et par essai. Faits relevés en aveugle ; rythme en coefficient de
+variation (cible de `/humaniser` : au moins 60 %, et pas moins que l'original) ; coût moyen par
+texte relevé par Claude Code.
 
-| | Texte 1, essai 1 | Texte 1, essai 2 | Texte 2, essai 1 | Texte 2, essai 2 |
-|---|---|---|---|---|
-| `/humaniser` | 1 nuance adoucie | 3 éléments perdus (le nombre « trois niveaux », deux phrases d'annonce) | fidèle | 1 nuance adoucie |
-| blader/humanizer | 2 nuances, 1 ajout | 1 ajout, 1 nuance | 1 nuance | fidèle |
-| samber humaniseur-fr | 3 ajouts | 3 ajouts, 1 nuance, 1 liste mise en prose | titre et 7 intertitres changés, 6 ajouts, 1 fait déformé | 2 ajouts, 1 fait déformé, 2 nuances, 3 listes mises en prose |
+| Passage | Faits, texte 1 | Faits, texte 2 | Rythme, texte 1 | Rythme, texte 2 | Coût |
+|---|---|---|---|---|---|
+| Originaux | | | 52 % | 64 % | |
+| `/humaniser`, essai 1 (interne) | 1 nuance adoucie | fidèle | 68 % | 66 % | 0,28 $ |
+| `/humaniser`, essai 2 (avant correction) | 3 éléments perdus (« trois niveaux », deux phrases d'annonce) | 1 nuance adoucie | 72 % | 60 % | 0,20 $ |
+| `/humaniser`, essai 3 (0.1.0) | 1 nuance adoucie | fidèle | 65 % | 66 % | 0,25 $ |
+| blader/humanizer, essai 1 | 2 nuances, 1 ajout | 1 nuance | 54 % | 47 % | 0,13 $ |
+| blader/humanizer, essai 2 | 1 ajout, 1 nuance | fidèle | 51 % | 64 % | 0,13 $ |
+| samber humaniseur-fr, essai 1 | 3 ajouts | titre et 7 intertitres changés, 6 ajouts, 1 fait déformé | 55 % | 59 % | 0,17 $ |
+| samber humaniseur-fr, essai 2 | 3 ajouts, 1 nuance, 1 liste mise en prose | 2 ajouts, 1 fait déformé, 2 nuances, 3 listes mises en prose | 59 % | 67 % | 0,17 $ |
 
-**Rythme** (coefficient de variation ; cible de `/humaniser` : 60 %) :
-
-| | Texte 1, essai 1 | Texte 1, essai 2 | Texte 2, essai 1 | Texte 2, essai 2 |
-|---|---|---|---|---|
-| Original | 52 % | 52 % | 64 % | 64 % |
-| `/humaniser` | **68 %** | **72 %** | **66 %** | 60 % |
-| blader/humanizer | 54 % | 51 % | 47 % | 64 % |
-| samber humaniseur-fr | 55 % | 59 % | 59 % | **67 %** |
-
-Pour lire ces chiffres : les textes humains de l'étude de référence sont à 78 %, ceux de ChatGPT à
+Pour lire le rythme : les textes humains de l'étude de référence sont à 78 %, ceux de ChatGPT à
 50 % (voir [`references/etudes.md`](../references/etudes.md)).
-
-**Coût moyen par texte**, relevé par Claude Code sur chaque session :
-
-| | Essai 1 | Essai 2 |
-|---|---|---|
-| `/humaniser` | 0,28 $ | 0,20 $ |
-| blader/humanizer | 0,13 $ | 0,13 $ |
-| samber humaniseur-fr | 0,17 $ | 0,17 $ |
 
 **Pangram** (essai 1 seulement) : les huit textes, originaux compris, sont jugés écrits par une IA
 à 100 %.
@@ -83,22 +77,21 @@ Exemples d'écarts relevés :
 - samber, texte 2, essai 2 : « deux démarches distinctes » devient « n'ont rien à voir l'une avec
   l'autre », alors que le même chiffre d'affaires sert aux deux.
 - `/humaniser`, texte 1, essai 2 : « On distingue trois niveaux de chantier » devient « Les
-  chantiers se rangent en niveaux » ; le nombre disparaît.
+  chantiers se rangent en niveaux » ; le nombre disparaît. À l'essai 3, après correction, il reste.
 
-Les six réécritures de l'essai 2 sont dans [`resultats/`](resultats/), nommées
-`t<texte>-<skill>.md`.
+Les réécritures sont dans [`resultats/`](resultats/) : `t<texte>-humaniser.md` pour l'essai 3,
+`t<texte>-<skill>-essai2.md` pour les trois skills à l'essai 2.
 
 ## Ce que ces chiffres disent, et ne disent pas
 
-- **Ce qui se répète d'un essai à l'autre** : samber ajoute des affirmations à chaque passage et
-  touche à la structure ; `/humaniser` et blader gardent la structure ; `/humaniser` atteint la cible
-  de rythme aux quatre passages (de justesse au dernier, 60,1 %) et donne la plus forte dispersion
-  trois fois sur quatre. À l'essai 2, sur le texte 2, blader et samber l'atteignent aussi.
-- **Ce qui varie** : la fidélité de `/humaniser` et de blader est proche, et leur classement
-  s'inverse d'un essai à l'autre. Sur le texte 2 de l'essai 2, `/humaniser` fait baisser le rythme
-  (64 → 60 %) : la cible est atteinte, mais l'original était déjà au-dessus.
-- **Deux textes, deux essais, c'est peu.** Un autre tirage du modèle donnerait d'autres chiffres.
-  Le comparatif montre des tendances, pas une mesure stable.
+- **Peu de passages, de petits écarts.** Deux textes, un passage par skill et par essai : on ne peut
+  pas conclure sur un écart d'une nuance ou de quelques points de rythme. Les chiffres varient d'un
+  passage à l'autre pour la même skill (de 65 à 72 % sur le texte 1 pour `/humaniser`, de 47 à 64 %
+  sur le texte 2 pour blader).
+- **Ce qui se répète** : `/humaniser` garde la structure et n'ajoute aucun fait, à chacun de ses six
+  passages ; il donne le rythme le plus varié trois fois sur quatre dans les essais à trois skills.
+  samber ajoute des affirmations à chaque passage et touche à la structure. blader garde la
+  structure, et sa fidélité est proche de celle de `/humaniser`.
 - **Deux sujets du même genre** : des articles de conseil grand public, sans fichier de voix. Rien ne
   dit ce que donnent les trois skills sur un texte technique, littéraire ou réglementé, ni avec un
   texte de référence, qui est l'usage prévu de `--voix`.

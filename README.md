@@ -41,7 +41,7 @@ npx skills add doingenia/skills
 | Famille | Plugin | Skill | Ce qu'il fait | Documentation |
 |---|---|---|---|---|
 | Écriture | `doingenia-ecriture` | [`relecture-anti-ia`](plugins/ecriture/skills/relecture-anti-ia/) | Relit un texte et retire les tics d'écriture qui trahissent une rédaction par IA, sans rien inventer. | [Mode d'emploi](plugins/ecriture/skills/relecture-anti-ia/README.md) |
-| Écriture | `doingenia-ecriture` | [`humaniser`](plugins/ecriture/skills/humaniser/) | Réécrit un texte écrit par une IA pour qu'il se lise comme celui d'un humain, sans perdre ni inventer un fait, structure intacte, rythme des phrases mesuré avant et après. | [Mode d'emploi](plugins/ecriture/skills/humaniser/README.md) |
+| Écriture | `doingenia-ecriture` | [`humaniser`](plugins/ecriture/skills/humaniser/) | Réécrit un texte écrit par une IA pour qu'il se lise comme celui d'un humain, avec un contrôle de chaque fait, structure intacte, rythme des phrases mesuré avant et après. | [Mode d'emploi](plugins/ecriture/skills/humaniser/README.md) |
 | GEO | `doingenia-geo` | [`empreinte-externe`](plugins/geo/skills/empreinte-externe/) | Relève ce que le registre, Pappers, LinkedIn, Wikidata et Google disent de votre entreprise, le compare à votre site et liste les écarts à corriger. | [Mode d'emploi](plugins/geo/skills/empreinte-externe/README.md) |
 | GEO | `doingenia-geo` | [`optimisation-geo`](plugins/geo/skills/optimisation-geo/) | Rend vos articles citables par les IA, pour le SEO et GEO et le référencement IA : ajoute en surligné le résumé, le tableau ou la FAQ qui manquent, sans réécrire l'auteur, avec contrôle mot pour mot. | [Mode d'emploi](plugins/geo/skills/optimisation-geo/README.md) |
 
