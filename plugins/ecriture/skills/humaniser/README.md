@@ -44,7 +44,7 @@ npx skills add doingenia/skills
 
 Dans Mistral Vibe, copiez ce dossier dans `~/.vibe/skills/` (voir le [README du dépôt](../../../../README.md#installation)), puis relancez Vibe.
 
-Dans Claude.ai ou l'application Claude : zippez ce dossier sans le sous-dossier `essais/`, puis importez le zip dans Réglages, section Skills. Activez l'exécution de code et la création de fichiers (Réglages, Capacités), sinon le rythme ne peut pas être mesuré.
+Dans Claude.ai ou l'application Claude : téléchargez [humaniser.zip](https://github.com/doingenia/skills/releases/download/humaniser-v0.1.2/humaniser.zip) (version 0.1.2, sans le dossier d'essais), puis importez-le dans Réglages, section Skills. Activez l'exécution de code et la création de fichiers (Réglages, Capacités), sinon le rythme ne peut pas être mesuré.
 
 Aucune clé d'API ni compte n'est nécessaire. Le script de mesure du rythme est en Python, sans dépendance : il faut un outil qui peut lancer Python et écrire des fichiers. Sans cela, le skill réécrit quand même le texte et dit que le rythme n'a pas été mesuré.
 
