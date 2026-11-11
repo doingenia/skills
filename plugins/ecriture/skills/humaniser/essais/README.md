@@ -82,6 +82,24 @@ Exemples d'écarts relevés :
 Les réécritures sont dans [`resultats/`](resultats/) : `t<texte>-humaniser.md` pour l'essai 3,
 `t<texte>-<skill>-essai2.md` pour les trois skills à l'essai 2.
 
+## Dans Mistral Vibe
+
+Un passage de `/humaniser` 0.1.0 dans Mistral Vibe 3.1.2, avec le modèle GLM-5.3 hébergé par
+Mistral, sur le texte 2, avec la même consigne. La skill a été copiée dans `~/.vibe/skills/` et
+appelée par `/humaniser` ; chaque commande a été approuvée à la main.
+
+- **Rythme** : 64 → 69 %. Le premier brouillon était à 64,2 %, juste au niveau de l'original : la
+  skill a repris deux paragraphes, comme le prévoit sa règle.
+- **Faits** (relecture en aveugle, même protocole) : un élément perdu. La phrase « Premier point à
+  clarifier : votre déclaration à l'Urssaf et votre déclaration d'impôts sont deux démarches
+  distinctes » a été supprimée ; l'intertitre et la liste qui suivent le disent encore, mais plus
+  explicitement. Aucun ajout, aucune nuance changée, structure intacte.
+- **Coût** : non relevé.
+
+La réécriture est dans [`resultats/t2-humaniser-vibe.md`](resultats/t2-humaniser-vibe.md). Un seul
+passage, sur un seul texte : il montre que la skill fonctionne dans Vibe, pas qu'elle y donne les
+mêmes résultats qu'avec Claude.
+
 ## Ce que ces chiffres disent, et ne disent pas
 
 - **Peu de passages, de petits écarts.** Deux textes, un passage par skill et par essai : on ne peut

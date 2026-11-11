@@ -1,5 +1,11 @@
 # humaniser : journal des versions
 
+## 0.1.1
+
+- Testé dans Mistral Vibe 3.1.2 (modèle GLM-5.3) : installation, appel par `/humaniser` et essai documentés.
+- Exemple avant et après en tête du README.
+- Exemple 1 corrigé : « rendement élevé » garde son adjectif.
+
 ## 0.1.0
 
 - Première version publique, tirée de notre version interne : réécriture de la prose d'un texte français écrit par une IA, en une seule passe, sans changer ce qu'il dit.

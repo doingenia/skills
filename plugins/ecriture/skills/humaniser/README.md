@@ -4,6 +4,29 @@
 
 Il ne promet pas de passer les détecteurs. Dans le premier essai de notre comparatif, les huit textes, originaux compris, sont jugés écrits par une IA à 100 % par Pangram, quelle que soit la skill qui les a réécrits.
 
+## Un exemple
+
+Un paragraphe fictif, écrit pour montrer le geste (le premier de [references/exemples.md](references/exemples.md)). Les réécritures réelles des essais sont dans [essais/resultats/](essais/resultats/).
+
+**5 phrases → 3 · 86 mots → 30 · 5 faits et 1 nuance gardés**
+
+Légende : ~~barré~~ = supprimé · **gras** = fait gardé · *italique* = nuance gardée · (1) à (4) = changements expliqués dessous.
+
+**Avant**
+
+> (1) ~~Dans un contexte de hausse des prix de l'énergie, le choix d'un mode de chauffage constitue un enjeu crucial pour de nombreux ménages.~~ La pompe à chaleur air-eau (2) ~~se positionne comme une solution particulièrement intéressante, offrant~~ un **rendement élevé** tout en permettant de **réduire significativement la facture**. (3) ~~Il ne s'agit pas simplement d'un équipement, mais d'un véritable investissement pour l'avenir.~~ Son coût, compris **entre 10 000 et 16 000 €** **pose comprise**, *peut toutefois sembler élevé*. C'est pourquoi il est essentiel de bien **se renseigner sur les aides disponibles**.
+
+**Après**
+
+> (4) Une pompe à chaleur air-eau coûte **de 10 000 à 16 000 €**, **pose comprise**, ce qui *peut sembler élevé*. Son **rendement élevé réduit nettement la facture**. **Renseignez-vous** d'abord **sur les aides disponibles**.
+
+1. Ouverture de décor et « enjeu crucial » : la phrase ne dit rien sur la pompe à chaleur.
+2. « Se positionne comme » et « offrant » : des tournures de modèle qui retardent le fait.
+3. Fausse opposition « pas un équipement, mais un investissement » : personne ne croyait l'inverse.
+4. Le prix passe en tête, avec « pose comprise ».
+
+Ce qui ne change pas : la nuance « peut sembler élevé » ne devient pas « c'est cher », et le skill n'ajoute pas que les aides couvrent une partie du prix, ni quand les demander, puisque le texte d'origine ne le dit pas.
+
 ## Installation
 
 Dans Claude Code :
@@ -19,9 +42,11 @@ Ou, avec tout outil compatible avec les Agent Skills :
 npx skills add doingenia/skills
 ```
 
+Dans Mistral Vibe, copiez ce dossier dans `~/.vibe/skills/` (voir le [README du dépôt](../../../../README.md#installation)), puis relancez Vibe.
+
 Aucune clé d'API ni compte n'est nécessaire. Le script de mesure du rythme est en Python, sans dépendance : il faut un outil qui peut lancer Python et écrire des fichiers. Sans cela, le skill réécrit quand même le texte et dit que le rythme n'a pas été mesuré.
 
-Testé avec Claude Code, sur les deux textes du comparatif. Pas encore testé dans Mistral Vibe.
+Testé avec Claude Code (Claude Sonnet 5.5), sur les deux textes du comparatif, et dans Mistral Vibe 3.1.2 (modèle GLM-5.3 hébergé par Mistral), sur le texte 2 : voir [essais/](essais/README.md#dans-mistral-vibe).
 
 ## Utilisation
 
@@ -30,6 +55,12 @@ Le skill ne se déclenche pas tout seul : lancer `/humaniser`, c'est décider d'
 ```
 /doingenia-ecriture:humaniser "brouillons/article.md"
 /doingenia-ecriture:humaniser "brouillons/article.md" --voix "references/page-a-propos.md"
+```
+
+Dans Mistral Vibe, la commande est `/humaniser` :
+
+```
+/humaniser "brouillons/article.md" --voix "references/page-a-propos.md"
 ```
 
 Ou lancez-le sans argument et collez le texte dans le même message.

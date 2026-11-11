@@ -24,7 +24,7 @@ Les codes (A1, B3…) renvoient à `tournures.md`.
 > **Après**
 >
 > Une pompe à chaleur air-eau coûte de 10 000 à 16 000 €, pose comprise, ce qui peut sembler
-> élevé. Son rendement réduit nettement la facture. Renseignez-vous d'abord sur les aides
+> élevé. Son rendement élevé réduit nettement la facture. Renseignez-vous d'abord sur les aides
 > disponibles.
 
 **Ce qui a changé** : l'ouverture de décor (D2) et l'enjeu crucial (D1) disparaissent ; « se
@@ -32,8 +32,8 @@ positionne comme » et « offrant » (C5, C4) laissent la place au fait ; l'oppo
 équipement, mais un investissement » (A1) est coupée, car personne ne croyait l'inverse. Le prix
 passe en tête, avec « pose comprise ». La nuance « peut sembler élevé » reste telle quelle : elle ne
 devient pas « c'est cher ». On n'ajoute pas que les aides couvrent une partie du prix, ni quand les
-demander : le texte d'origine ne le dit pas. « Rendement élevé » perd son adjectif, parce que la
-phrase dit déjà ce qu'il produit ; si l'auteur tenait au mot, on le garderait.
+demander : le texte d'origine ne le dit pas. « Rendement élevé » garde son adjectif : c'est une
+information, pas un ornement.
 
 ---
 
