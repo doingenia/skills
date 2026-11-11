@@ -1,7 +1,7 @@
 {
   "name": "doingenia-ecriture",
   "description": "Skills d'écriture de Do Ingenia : relire un texte pour retirer les tics qui trahissent une rédaction par IA, et humaniser un texte écrit par une IA sans changer ce qu'il dit.",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "author": {
     "name": "Do Ingenia",
     "url": "https://doingenia.com"

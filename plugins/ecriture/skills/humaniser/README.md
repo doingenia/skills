@@ -44,9 +44,11 @@ npx skills add doingenia/skills
 
 Dans Mistral Vibe, copiez ce dossier dans `~/.vibe/skills/` (voir le [README du dépôt](../../../../README.md#installation)), puis relancez Vibe.
 
+Dans Claude.ai ou l'application Claude : zippez ce dossier sans le sous-dossier `essais/`, puis importez le zip dans Réglages, section Skills. Activez l'exécution de code et la création de fichiers (Réglages, Capacités), sinon le rythme ne peut pas être mesuré.
+
 Aucune clé d'API ni compte n'est nécessaire. Le script de mesure du rythme est en Python, sans dépendance : il faut un outil qui peut lancer Python et écrire des fichiers. Sans cela, le skill réécrit quand même le texte et dit que le rythme n'a pas été mesuré.
 
-Testé avec Claude Code (Claude Sonnet 5.5), sur les deux textes du comparatif, et dans Mistral Vibe 3.1.2 (modèle GLM-5.3 hébergé par Mistral), sur le texte 2 : voir [essais/](essais/README.md#dans-mistral-vibe).
+Testé avec Claude Code (Claude Sonnet 5.5) sur les deux textes du comparatif, et sur le texte 2 dans Claude.ai (Claude Opus 5.5) et dans Mistral Vibe 3.1.2 (modèle GLM-5.3 hébergé par Mistral) : voir [essais/](essais/README.md#dans-claudeai-et-mistral-vibe).
 
 ## Utilisation
 
@@ -62,6 +64,8 @@ Dans Mistral Vibe, la commande est `/humaniser` :
 ```
 /humaniser "brouillons/article.md" --voix "references/page-a-propos.md"
 ```
+
+Dans Claude.ai, tapez `/humaniser` et joignez le fichier **au même message** : sans texte ni pièce jointe, le skill s'arrête et vous le demande.
 
 Ou lancez-le sans argument et collez le texte dans le même message.
 

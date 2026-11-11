@@ -11,3 +11,4 @@ Les évolutions de chaque skill sont détaillées dans le `CHANGELOG.md` de son 
 - Skill `optimisation-geo` (0.1.0) dans le plugin `doingenia-geo` (0.2.0).
 - Skill `humaniser` (0.1.0) dans le plugin `doingenia-ecriture` (0.3.0).
 - `humaniser` 0.1.1 : testé dans Mistral Vibe, exemple en tête du README (plugin 0.3.1).
+- `humaniser` 0.1.2 : testé dans Claude.ai, installation documentée (plugin 0.3.2).

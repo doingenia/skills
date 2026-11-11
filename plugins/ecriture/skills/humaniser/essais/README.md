@@ -82,9 +82,25 @@ Exemples d'écarts relevés :
 Les réécritures sont dans [`resultats/`](resultats/) : `t<texte>-humaniser.md` pour l'essai 3,
 `t<texte>-<skill>-essai2.md` pour les trois skills à l'essai 2.
 
-## Dans Mistral Vibe
+## Dans Claude.ai et Mistral Vibe
 
-Un passage de `/humaniser` 0.1.0 dans Mistral Vibe 3.1.2, avec le modèle GLM-5.3 hébergé par
+Le texte 2, avec la même consigne, dans deux autres environnements. Un passage chacun, relu en
+aveugle avec le même protocole.
+
+| Environnement | Rythme | Faits |
+|---|---|---|
+| Claude Code, Claude Sonnet 5.5 (essai 3) | 64 → 66 % | fidèle |
+| Claude.ai, Claude Opus 5.5 | 64 → 67 % | fidèle |
+| Mistral Vibe 3.1.2, GLM-5.3 hébergé par Mistral | 64 → 69 % | 1 élément perdu |
+
+**Claude.ai.** La skill a été importée en zip (sans ce dossier d'essais), exécution de code
+activée, appelée par `/humaniser` avec le texte en pièce jointe. Le rythme mesuré par la skill
+dans son compte rendu (64,1 → 66,7 %) est celui que donne le script sur le fichier téléchargé.
+Aucun fait perdu, ajouté ou déformé, aucune nuance changée, structure intacte. Le compte rendu a
+en plus signalé trois doutes sur le fond du texte, sans rien corriger. La réécriture est dans
+[`resultats/t2-humaniser-claude-ai.md`](resultats/t2-humaniser-claude-ai.md). Coût non relevé.
+
+**Mistral Vibe.** Un passage de `/humaniser` 0.1.0 dans Mistral Vibe 3.1.2, avec le modèle GLM-5.3 hébergé par
 Mistral, sur le texte 2, avec la même consigne. La skill a été copiée dans `~/.vibe/skills/` et
 appelée par `/humaniser` ; chaque commande a été approuvée à la main.
 
@@ -97,8 +113,8 @@ appelée par `/humaniser` ; chaque commande a été approuvée à la main.
 - **Coût** : non relevé.
 
 La réécriture est dans [`resultats/t2-humaniser-vibe.md`](resultats/t2-humaniser-vibe.md). Un seul
-passage, sur un seul texte : il montre que la skill fonctionne dans Vibe, pas qu'elle y donne les
-mêmes résultats qu'avec Claude.
+passage par environnement, sur un seul texte : ces essais montrent que la skill fonctionne dans
+Claude.ai et dans Vibe, pas qu'elle y donne toujours ces résultats.
 
 ## Ce que ces chiffres disent, et ne disent pas
 

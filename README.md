@@ -31,6 +31,14 @@ cp -R skills/plugins/geo/skills/empreinte-externe ~/.vibe/skills/
 cp -R skills/plugins/geo/skills/optimisation-geo ~/.vibe/skills/
 ```
 
+**Claude.ai et l'application Claude** : zippez le dossier du skill, puis importez le zip dans Réglages, section Skills (exécution de code activée dans Réglages, Capacités). Testé sur `humaniser` :
+
+```
+git clone https://github.com/doingenia/skills.git
+cd skills/plugins/ecriture/skills
+zip -r humaniser.zip humaniser -x 'humaniser/essais/*'
+```
+
 **Tout outil compatible avec les Agent Skills** :
 
 ```

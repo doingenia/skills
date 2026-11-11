@@ -1,5 +1,9 @@
 # humaniser : journal des versions
 
+## 0.1.2
+
+- Testé dans Claude.ai (Claude Opus 5.5) : import en zip, capacités à activer, appel par `/humaniser` avec le fichier joint au même message, essai documenté.
+
 ## 0.1.1
 
 - Testé dans Mistral Vibe 3.1.2 (modèle GLM-5.3) : installation, appel par `/humaniser` et essai documentés.
